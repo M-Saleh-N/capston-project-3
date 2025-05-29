@@ -13,19 +13,10 @@ const Navbar = () => {
         <p>MARIDADI BOUQUETS KE</p>
       </div>
       <ul className='nav-menu'>
-          <li>
-          <Link to='/'>Home</Link>
-        </li>
-        <li>
-          <Link to='/products'>Products</Link>
-        </li>
-        <li>
-          <Link to='/cart'>Cart</Link>
-        </li>
-        <li>
-          <Link to='/checkout'>Checkout</Link>
-        </li>
-
+        <li>Home</li>
+        <li>Products</li>
+        <li>Cart</li>
+        <li>Checkout</li>
       </ul>
       <div className='nav-login-cart'>
         <button>Login</button>
