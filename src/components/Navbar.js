@@ -14,7 +14,7 @@ const Navbar = () => {
       </div>
       <ul className='nav-menu'>
         <li>Home</li>
-        <li>Products</li>
+        <li>Products <hr/></li>
         <li>Cart</li>
         <li>Checkout</li>
       </ul>
