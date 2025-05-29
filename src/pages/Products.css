@@ -1,60 +1,64 @@
-.pg {
+/* Products.css */
+.product-container {
   padding: 2rem;
-  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff8fa;
 }
 
-.pg-title {
+.page-title {
+  text-align: center;
   font-size: 2rem;
   margin-bottom: 1.5rem;
   color: rgb(219, 105, 128);
 }
 
-.grid {
+.products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
-.card {
-  border: 1px solid #eee;
-  border-radius: 10px;
-  padding: 1rem;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.product-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-.img {
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
   width: 100%;
-  height: 200px;
+  height: 230px;
   object-fit: cover;
-  border-radius: 8px;
 }
 
-.nm {
-  font-size: 1.2rem;
-  margin: 0.8rem 0 0.2rem;
+.product-card h3 {
+  margin: 1rem 0 0.5rem;
+  color: #2b2020;
+}
+
+.product-card p {
   color: #333;
-}
-
-.pr {
   font-weight: bold;
-  color: #444;
   margin-bottom: 0.8rem;
 }
 
-.btn {
+.product-card button {
   background-color: rgb(219, 105, 128);
   color: white;
   border: none;
+  border-radius: 20px;
   padding: 0.6rem 1.2rem;
-  border-radius: 5px;
+  margin-bottom: 1rem;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
 }
 
-.btn:hover {
+.product-card button:hover {
   background-color: rgb(200, 90, 115);
 }
