@@ -7,6 +7,7 @@ import About from './pages/About'
 import Check from './pages/Checkout';
 import Cart from './pages/Cart';
 import Homie from './pages/Home'
+import HomePage from './pages/Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/home",
-    element: <Homie/>,
+    element: <HomePage/>,
   },
   {
     path: "/about",
