@@ -42,7 +42,7 @@ const ProductsPage = () => {
     { id: 13, name: 'Maroon Forever Roses', price: 3600, imgUrl: maroonForever },
     { id: 14, name: 'Floral Gift Bag', price: 3600, imgUrl: katty1},
     { id: 15, name: 'Mixed Roses Bouquet', price: 5500, imgUrl:mixedMroon },
-    { id: 16, name: 'Floral Gift Bag', price: 2500, imgUrl: katty3},
+    { id: 16, name: 'Table Roses', price: 2500, imgUrl: katty3},
     { id: 17, name: 'Maroon Forever Roses', price: 3600, imgUrl:  mothersDay},
     { id: 18, name: 'Pink Mixed Bouquet', price: 3600, imgUrl: cutePink},
     { id: 19, name: 'Floral Gift Bag', price: 3600, imgUrl: katty2 },
