@@ -4,6 +4,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './pages/About'
+import Check from './pages/Checkout';
+import Cart from './pages/Cart';
+import Homie from './pages/Home'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -13,8 +16,22 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
+    path: "/home",
+    element: <Homie/>,
+  },
+  {
     path: "/about",
     element: <About />
+  },
+
+  {
+    path: "/cart",
+    element: <Cart />
+  },
+
+   {
+    path: "/checkout",
+    element: <Check />
   }
   ])
 
