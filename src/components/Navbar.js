@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.css'
 
 import logo from '../assets/Maridadi.png'
+import cart_icon from '../assets/cart_icon.png'
 
 const Navbar = () => {
   return(
@@ -26,6 +27,9 @@ const Navbar = () => {
         </li>
 
       </ul>
+      <div className='nav-login-cart'>
+        <button>Login</button>
+      </div>
 
     </div>
   )
