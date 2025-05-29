@@ -16,10 +16,10 @@ const Navbar = () => {
         <p>MARIDADI BOUQUETS KE</p>
       </div>
       <ul className='nav-menu'>
-        <li onClick={()=>{setMenu("home")}}>Home</li>
-        <li onClick={()=>{setMenu("products")}}>Products <hr/></li>
-        <li onClick={()=>{setMenu("cart")}}>Cart</li>
-        <li onClick={()=>{setMenu("checkout")}}>Checkout</li>
+        <li onClick={()=>{setMenu("home")}}>Home{menu==="home"?<hr/>:<></>}</li>
+        <li onClick={()=>{setMenu("products")}}>Products{menu==="products"?<hr/>:<></>}</li>
+        <li onClick={()=>{setMenu("cart")}}>Cart{menu==="cart"?<hr/>:<></>}</li>
+        <li onClick={()=>{setMenu("checkout")}}>Checkout{menu==="checkout"?<hr/>:<></>}</li>
       </ul>
       <div className='nav-login-cart'>
         <button>Login</button>
