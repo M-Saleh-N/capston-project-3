@@ -16,7 +16,7 @@
     gap: 10px;
 }
 .nav-logo p{
-    color: #171717;
+    color:rgb(43, 32, 32);
     font-size: 28px;
     font-weight: 600;
 }
@@ -51,7 +51,7 @@
     width: 80%;
     height: 3px;
     border-radius: 10px;
-    background: #FF4141;
+    background: rgb(219, 105, 128);
 }
 
 .nav-login-cart{
@@ -87,6 +87,6 @@
     margin-left: -55px;
     border-radius: 11px;
     font-size: 14px;
-    background: red;
+    background:rgb(219, 105, 128);
     color: white;
 }
