@@ -2,28 +2,30 @@ import React from 'react';
 import './Products.css';
 
 
+import maroonRose from '../assets/maroon-roses.jpg';
+import pinkRoses from '../assets/pink-roses.jpg';
+import mixedRoses from '../assets/mixed-roses-bouquet.jpg';
+
 const products = [
   {
     id: 1,
-    name: "Rose Bouquet",
-    price: 25.00,
-    img: "/images/rose.jpg",
+    name: 'Red Mixed Bouquet',
+    price: 2500,
+    imgUrl: mixedRoses,
   },
   {
     id: 2,
-    name: "Tulip Delight",
-    price: 30.00,
-    img: "",
+    name: 'Pink Roses',
+    price: 950,
+    imgUrl: pinkRoses,
   },
   {
     id: 3,
-    name: "Sunflower Charm",
-    price: 20.00,
-    img: "/images/sunflower.jpg",
+    name: 'Maroon Roses',
+    price: 1300,
+    imgUrl: maroonRose,
   },
-  // Add more products as needed
 ];
-
 const ProductsPage = () => {
   const handleAddToCart = (product) => {
     console.log(`Added to cart: ${product.name}`);
@@ -38,7 +40,7 @@ const ProductsPage = () => {
           <div className="card" key={prod.id}>
             <img src={prod.img} alt={prod.name} className="img" />
             <h3 className="nm">{prod.name}</h3>
-            <p className="pr">${prod.price.toFixed(2)}</p>
+            <p className="pr">Ksh{prod.price.toFixed(2)}</p>
             <button className="btn" onClick={() => handleAddToCart(prod)}>
               Add to Cart
             </button>
