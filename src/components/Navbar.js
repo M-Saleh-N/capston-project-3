@@ -11,6 +11,21 @@ const Navbar = () => {
         <img src={logo} alt=''/>
         <p>MARIDADI BOUQUETS KE</p>
       </div>
+      <ul className='nav-menu'>
+          <li>
+          <Link to='/'>Home</Link>
+        </li>
+        <li>
+          <Link to='/products'>Products</Link>
+        </li>
+        <li>
+          <Link to='/cart'>Cart</Link>
+        </li>
+        <li>
+          <Link to='/checkout'>Checkout</Link>
+        </li>
+
+      </ul>
 
     </div>
   )
