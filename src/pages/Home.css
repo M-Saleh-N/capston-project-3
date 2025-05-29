@@ -1,0 +1,43 @@
+.bg {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('/src/assets/pink-background.jpg'); /* Replace with your actual image path */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 290px;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(43, 32, 32);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.center {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background-color: rgb(219, 105, 128);
+  color: rgb(43, 32, 32);
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
