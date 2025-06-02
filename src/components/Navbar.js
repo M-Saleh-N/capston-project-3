@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../assets/Maridadi.png';
+// import logo from '../assets/Maridadi.png';
 import cart_icon from '../assets/cart_icon.png';
 
 const Navbar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <div className='nav-logo'>
-        <img src={logo} alt='' />
+        {/* <img src={logo} alt='' /> */}
         <p>MARIDADI BOUQUETS KE</p>
       </div>
       <ul className='nav-menu'>

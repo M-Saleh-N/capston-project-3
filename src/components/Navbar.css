@@ -3,95 +3,96 @@
 
 
 
-.navbar{
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    box-shadow: 0 1px 3px -2px black;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(219, 105, 128);
+  padding: 1rem 2rem;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.nav-logo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.nav-logo p{
-    color:rgb(43, 32, 32);
-    font-size: 28px;
-    font-weight: 600;
+.nav-logo {
+  display: flex;
+  align-items: center;
 }
 
 .nav-logo img {
-  width: 40px; /* adjust size here */
-  height: auto;
+  height: 50px;
+  margin-right: 10px;
 }
 
-.nav-menu{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 50px;
-    color: #626262;
-    font-size: 20px;
-    font-weight: 500;
+.nav-logo p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-.nav-menu li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: Poppins;
-    justify-content: center;
-    gap: 3px;
-    cursor: pointer;
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
 }
 
-.nav-menu hr {
-    border: none;
-    width: 80%;
-    height: 3px;
-    border-radius: 10px;
-    background: rgb(219, 105, 128);
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.nav-login-cart{
-    display: flex;
-    align-items: center;
-    gap: 45px;
+.nav-menu li a:hover {
+  color: #ffe9ee;
 }
 
-.nav-login-cart button{
-    width: 157px;
-    height: 58px;
-    outline: none;
-    border: 1px solid #7a7a7a;
-    border-radius: 75px;
-    color: #515151;
-    font-size: 20px;
-    font-weight: 500;
-    background: white;
-    cursor: pointer;
+.nav-login-cart {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.nav-login-cart button:active{
-    background: #f3f3f3;
+.nav-login-cart button {
+  background-color: white;
+  color: rgb(219, 105, 128);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.nav-cart-count{
-    width: 22px;
-    height: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -35px;
-    margin-left: 15px;
-    border-radius: 11px;
-    font-size: 14px;
-    background:rgb(219, 105, 128);
-    color: white;
+.nav-login-cart button:hover {
+  background-color: #ffe9ee;
 }
 
-.nav-login-cart img{
-    width: 20px;
+.cart-icon-link {
+  position: relative;
+  display: inline-block;
+}
 
+.cart-icon-link img {
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+.nav-cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: white;
+  color: rgb(219, 105, 128);
+  width: 20px;
+  height: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
