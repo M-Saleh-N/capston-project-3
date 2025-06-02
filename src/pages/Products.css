@@ -61,3 +61,30 @@
 .product-card button:hover {
   background-color: rgb(200, 90, 115);
 }
+
+.product-search {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.7rem 1rem;
+  margin: 0 auto 2rem;
+  display: block;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s;
+  outline: none;
+  color: #333;
+}
+
+.product-search:focus {
+  border-color: #d86c8c; 
+}
+
+.empty-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #d86c8c;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 2rem;
+}
