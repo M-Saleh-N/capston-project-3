@@ -1,4 +1,3 @@
-// index.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -8,7 +7,8 @@ import Check from './pages/Checkout';
 import Cart from './pages/Cart';
 import HomePage from './pages/Home';
 import ProductsPage from './pages/Products';
-import './index.css'; 
+import { CartProvider } from './context/CartContext';
+import './index.css';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +27,8 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   </React.StrictMode>
 );
