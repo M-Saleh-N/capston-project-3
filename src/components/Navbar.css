@@ -84,9 +84,14 @@
     align-items: center;
     justify-content: center;
     margin-top: -35px;
-    margin-left: -55px;
+    margin-left: 15px;
     border-radius: 11px;
     font-size: 14px;
     background:rgb(219, 105, 128);
     color: white;
+}
+
+.nav-login-cart img{
+    width: 20px;
+
 }
