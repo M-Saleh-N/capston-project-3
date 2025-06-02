@@ -11,6 +11,7 @@ import { CartProvider } from './context/CartContext';
 import './index.css';
 import SingleProduct from './pages/SingleProduct';
 
+
 const router = createBrowserRouter([
   {
     path: '/',
