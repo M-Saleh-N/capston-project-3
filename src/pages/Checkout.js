@@ -8,6 +8,7 @@ const CheckoutPage = () => {
     phone: '',
     email: '',
     notes: '',
+    paymentMethod: 'mpesa',
   });
 
   const handleChange = (e) => {
@@ -17,14 +18,14 @@ const CheckoutPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Thank you for your order, ${form.name}!`);
-   
+    alert(`Thank you for your order, ${form.name}! Payment method: ${form.paymentMethod}`);
     setForm({
       name: '',
       address: '',
       phone: '',
       email: '',
       notes: '',
+      paymentMethod: 'mpesa',
     });
   };
 
@@ -52,6 +53,16 @@ const CheckoutPage = () => {
           Additional Notes
           <textarea name="notes" value={form.notes} onChange={handleChange} rows="4" />
         </label>
+
+        <label>
+          Payment Method
+          <select name="paymentMethod" value={form.paymentMethod} onChange={handleChange} required>
+            <option value="mpesa">M-PESA</option>
+            <option value="card">Credit / Debit Card</option>
+            <option value="cash">Cash on Delivery</option>
+          </select>
+        </label>
+
         <button type="submit">Place Order</button>
       </form>
     </div>
