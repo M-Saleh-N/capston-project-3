@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import React from 'react';
+import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
 import './Products.css';
 
@@ -47,7 +47,8 @@ import img40 from '../assets/40.jpg';
 import img41 from '../assets/41.jpg';
 
 const ProductsPage = () => {
-  const { addToCart } = useCart(); //  use the cart context
+  const { addToCart } = useCart();
+  const [searchTerm, setSearchTerm] = useState('');
 
   const products = [
     { id: 1, name: 'Red Mixed Bouquet', price: 2500, imgUrl: mixedRoses },
@@ -69,7 +70,6 @@ const ProductsPage = () => {
     { id: 17, name: 'Maroon Forever Roses', price: 3600, imgUrl: mothersDay },
     { id: 18, name: 'Pink Mixed Bouquet', price: 3600, imgUrl: cutePink },
     { id: 19, name: 'Floral Gift Bag', price: 3600, imgUrl: katty2 },
-
     { id: 20, name: 'Red Mixed Bouquet', price: 2500, imgUrl: img20 },
     { id: 21, name: 'Pink Roses', price: 950, imgUrl: img21 },
     { id: 22, name: 'Maroon Roses', price: 1300, imgUrl: img22 },
@@ -94,27 +94,43 @@ const ProductsPage = () => {
     { id: 41, name: 'Rose Heart Box', price: 3800, imgUrl: img41 },
   ];
 
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="product-container">
       <h2 className="page-title">Our Bouquets</h2>
-      <div className="products-grid">
-        {products.map((product) => (
-          <div key={product.id} className="product-card">
-            <img src={product.imgUrl} alt={product.name} />
-            <h3>{product.name}</h3>
-            <p>KES {product.price}</p>
-           <div className="product-buttons">
-              <button onClick={() => addToCart(product)}>Add to Cart</button>
-              <Link to={`/products/${product.id}`}>
-                <button>View Details</button>
-              </Link>
+
+      <input
+        type="text"
+        placeholder="Search products..."
+        className="product-search"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+
+      {filteredProducts.length === 0 ? (
+        <p className="empty-message">No matching products found.</p>
+      ) : (
+        <div className="products-grid">
+          {filteredProducts.map((product) => (
+            <div key={product.id} className="product-card">
+              <img src={product.imgUrl} alt={product.name} />
+              <h3>{product.name}</h3>
+              <p>KES {product.price}</p>
+              <div className="product-buttons">
+                <button onClick={() => addToCart(product)}>Add to Cart</button>
+                <Link to={`/products/${product.id}`}>
+                  <button>View Details</button>
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
 
 export default ProductsPage;
-
