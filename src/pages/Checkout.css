@@ -114,3 +114,41 @@
   }
 }
 
+@media (max-width: 600px) {
+  .checkout-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .checkout-title {
+    font-size: 1.5rem;
+  }
+
+  .checkout-form {
+    gap: 0.8rem;
+  }
+
+  .checkout-form input,
+  .checkout-form textarea,
+  .checkout-form select {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .checkout-form button {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.checkout-form button {
+  width: 100%;
+}
+
+}
