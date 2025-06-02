@@ -1,5 +1,7 @@
-// ProductsPage.jsx
 import React from 'react';
+import { useCart } from '../context/CartContext';
+import './Products.css';
+
 import maroonRose from '../assets/maroon-roses.jpg';
 import pinkRoses from '../assets/pink-roses.jpg';
 import mixedRoses from '../assets/mixed-roses-bouquet.jpg';
@@ -39,17 +41,13 @@ import img35 from '../assets/35.jpg';
 import img36 from '../assets/36.jpg';
 import img37 from '../assets/37.jpg';
 import img38 from '../assets/38.jpg';
-import img41 from '../assets/41.jpg';
 import img39 from '../assets/39.jpg';
 import img40 from '../assets/40.jpg';
-
-
-
-
-
-import './Products.css';
+import img41 from '../assets/41.jpg';
 
 const ProductsPage = () => {
+  const { addToCart } = useCart(); //  use the cart context
+
   const products = [
     { id: 1, name: 'Red Mixed Bouquet', price: 2500, imgUrl: mixedRoses },
     { id: 2, name: 'Pink Roses', price: 950, imgUrl: pinkRoses },
@@ -58,20 +56,19 @@ const ProductsPage = () => {
     { id: 5, name: 'Mixed Bouquet', price: 2500, imgUrl: jipso },
     { id: 6, name: 'Black Roses', price: 950, imgUrl: blackRoses },
     { id: 7, name: 'Money Bouquet', price: 1300, imgUrl: moneyBouquet1 },
-    { id: 8, name: 'Pink Forever Roses', price: 3600, imgUrl: pinkForever},
+    { id: 8, name: 'Pink Forever Roses', price: 3600, imgUrl: pinkForever },
     { id: 9, name: 'Snack Bouquet', price: 5500, imgUrl: snackBouquet },
     { id: 10, name: 'Money Bouquet', price: 2500, imgUrl: moneyBouquet2 },
     { id: 11, name: 'Black Forever Roses', price: 3600, imgUrl: blackGlittered },
-    { id: 12, name: 'Flower Box', price: 3600, imgUrl: flowerBox},
+    { id: 12, name: 'Flower Box', price: 3600, imgUrl: flowerBox },
     { id: 13, name: 'Maroon Forever Roses', price: 3600, imgUrl: maroonForever },
-    { id: 14, name: 'Floral Gift Bag', price: 3600, imgUrl: katty1},
-    { id: 15, name: 'Mixed Roses Bouquet', price: 5500, imgUrl:mixedMroon },
-    { id: 16, name: 'Table Roses', price: 2500, imgUrl: katty3},
-    { id: 17, name: 'Maroon Forever Roses', price: 3600, imgUrl:  mothersDay},
-    { id: 18, name: 'Pink Mixed Bouquet', price: 3600, imgUrl: cutePink},
+    { id: 14, name: 'Floral Gift Bag', price: 3600, imgUrl: katty1 },
+    { id: 15, name: 'Mixed Roses Bouquet', price: 5500, imgUrl: mixedMroon },
+    { id: 16, name: 'Table Roses', price: 2500, imgUrl: katty3 },
+    { id: 17, name: 'Maroon Forever Roses', price: 3600, imgUrl: mothersDay },
+    { id: 18, name: 'Pink Mixed Bouquet', price: 3600, imgUrl: cutePink },
     { id: 19, name: 'Floral Gift Bag', price: 3600, imgUrl: katty2 },
 
-   
     { id: 20, name: 'Red Mixed Bouquet', price: 2500, imgUrl: img20 },
     { id: 21, name: 'Pink Roses', price: 950, imgUrl: img21 },
     { id: 22, name: 'Maroon Roses', price: 1300, imgUrl: img22 },
@@ -91,8 +88,8 @@ const ProductsPage = () => {
     { id: 36, name: 'Maroon Forever Roses', price: 3600, imgUrl: img36 },
     { id: 37, name: 'Pink Mixed Bouquet', price: 3600, imgUrl: img37 },
     { id: 38, name: 'Floral Gift Bag', price: 3600, imgUrl: img38 },
-    { id: 39, name: 'Special Gift Box', price: 3000, imgUrl: img39 }, // optional placeholder
-    { id: 40, name: 'Luxury Box', price: 4500, imgUrl: img40 },       // optional placeholder
+    { id: 39, name: 'Special Gift Box', price: 3000, imgUrl: img39 },
+    { id: 40, name: 'Luxury Box', price: 4500, imgUrl: img40 },
     { id: 41, name: 'Rose Heart Box', price: 3800, imgUrl: img41 },
   ];
 
@@ -105,7 +102,7 @@ const ProductsPage = () => {
             <img src={product.imgUrl} alt={product.name} />
             <h3>{product.name}</h3>
             <p>KES {product.price}</p>
-            <button>Add to Cart</button>
+            <button onClick={() => addToCart(product)}>Add to Cart</button>
           </div>
         ))}
       </div>
@@ -114,3 +111,4 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
