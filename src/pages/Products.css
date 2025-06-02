@@ -88,3 +88,63 @@
   font-family: 'Poppins', sans-serif;
   margin-top: 2rem;
 }
+
+@media (max-width: 768px) {
+  .product-container {
+    padding: 1.5rem;
+  }
+
+  .page-title {
+    font-size: 1.6rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+
+  .product-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card button {
+    width: 80%;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: 180px;
+  }
+
+  .product-card h3 {
+    font-size: 1rem;
+  }
+
+  .product-card p {
+    font-size: 0.95rem;
+  }
+
+  .product-card button {
+    font-size: 0.9rem;
+  }
+
+  .product-search {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .page-title {
+    font-size: 1.4rem;
+  }
+}
