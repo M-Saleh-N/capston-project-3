@@ -18,7 +18,7 @@ const CheckoutPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Thank you for your order, ${form.name}!`);
-    // Reset form
+   
     setForm({
       name: '',
       address: '',
