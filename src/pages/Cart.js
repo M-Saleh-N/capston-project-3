@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
+import './Cart.css'
 
 const Cart = () => {
   const { cartItems, removeFromCart } = useCart();
@@ -9,26 +10,33 @@ const Cart = () => {
 
   return (
     <div className="cart-container">
-      <h2>Your Cart</h2>
-      {cartItems.length === 0 ? (
-        <p>Your cart is empty. <Link to="/products">Browse Products</Link></p>
-      ) : (
-        <div>
-          {cartItems.map((item, index) => (
-            <div key={index} className="cart-item">
-              <img src={item.imgUrl} alt={item.name} style={{ width: '100px' }} />
-              <div>
-                <h4>{item.name}</h4>
-                <p>KES {item.price}</p>
-                <button onClick={() => removeFromCart(item.id)}>Remove</button>
-              </div>
+  <h2 className="cart-title">Your Cart</h2>
+  {cartItems.length === 0 ? (
+    <p className="empty-message">Your cart is empty.</p>
+  ) : (
+    <>
+      <div className="cart-items">
+        {cartItems.map((item) => (
+          <div key={item.id} className="cart-item">
+            <img src={item.imgUrl} alt={item.name} />
+            <div className="cart-details">
+              <h4>{item.name}</h4>
+              <p>Price: KES {item.price}</p>
+              <p>Quantity: {item.quantity}</p>
             </div>
-          ))}
-          <h3>Total: KES {total}</h3>
-          <Link to="/checkout"><button>Proceed to Checkout</button></Link>
-        </div>
-      )}
-    </div>
+            <button onClick={() => removeFromCart(item.id)} className="remove-btn">
+              Remove
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="cart-total">
+        Total: KES {cartItems.reduce((total, item) => total + item.price * item.quantity, 0)}
+      </div>
+    </>
+  )}
+</div>
+
   );
 };
 
