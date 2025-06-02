@@ -39,10 +39,10 @@ const Cart = () => {
               (total, item) => total + item.price * item.quantity,
               0
             )}
-            
-             <Link to="/checkout" className="checkout-button">
+
+        <Link to="/checkout" className="checkout-button">
             Proceed to Checkout
-          </Link>
+        </Link>
 
           </div>
         </>

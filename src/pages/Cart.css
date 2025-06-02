@@ -85,3 +85,27 @@
   color: #777;
 }
 
+.checkout-button {
+  display: inline-block;
+  background-color: rgb(219, 105, 128);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+  background-color: rgb(200, 90, 115);
+}
+
+.cart-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 1rem;
+}
+
