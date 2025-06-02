@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import { useCart } from '../context/CartContext';
 import './Products.css';
@@ -102,7 +103,12 @@ const ProductsPage = () => {
             <img src={product.imgUrl} alt={product.name} />
             <h3>{product.name}</h3>
             <p>KES {product.price}</p>
-            <button onClick={() => addToCart(product)}>Add to Cart</button>
+           <div className="product-buttons">
+              <button onClick={() => addToCart(product)}>Add to Cart</button>
+              <Link to={`/products/${product.id}`}>
+                <button>View Details</button>
+              </Link>
+            </div>
           </div>
         ))}
       </div>
