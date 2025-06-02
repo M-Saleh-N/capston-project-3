@@ -97,6 +97,20 @@
   justify-content: center;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+/* Hide mobile login by default */
+.mobile-login-btn {
+  display: none;
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -106,14 +120,91 @@
 
   .nav-logo {
     width: 100%;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
   }
 
   .nav-menu {
+    display: none;
     flex-direction: column;
     width: 100%;
     gap: 1rem;
     margin-top: 1rem;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-menu li a,
+  .mobile-login-btn button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+    color: white;
+    text-align: left;
+    background: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .nav-login-cart {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+
+  .desktop-login {
+    display: none;
+  }
+
+  .mobile-login-btn {
+    display: block;
+  }
+
+  .cart-icon-link img {
+    height: 25px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav-menu.active {
+    display: flex;
   }
 
   .nav-menu li {
@@ -142,3 +233,100 @@
     height: 25px;
   }
 }
+
+/* Hide mobile login and cart by default */
+.mobile-login-btn,
+.mobile-cart-link {
+  display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-menu li a,
+  .mobile-login-btn button,
+  .mobile-cart-link a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+    color: white;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    background: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+  }
+
+  .mobile-cart-link img {
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+    filter: brightness(0) invert(1);
+  }
+
+  .mobile-cart-link .nav-cart-count {
+    display: inline-block;
+    background-color: white;
+    color: rgb(219, 105, 128);
+    border-radius: 50%;
+    font-size: 0.7rem;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    margin-left: 6px;
+  }
+
+  .nav-login-cart {
+    display: none;
+  }
+
+  .mobile-login-btn,
+  .mobile-cart-link {
+    display: block;
+  }
+
+  .desktop-login,
+  .desktop-cart {
+    display: none;
+  }
+}
+
