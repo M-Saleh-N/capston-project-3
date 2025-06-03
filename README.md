@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# 💐 Maridadi Bouquets Ke
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to **Maridadi Bouquets Ke** — an elegant, responsive React e-commerce flower shop. Built with love and styled to delight, this app lets customers browse beautiful bouquets, view individual products, add items to a cart, and complete checkout with ease. 🌸✨
 
-## Available Scripts
+## 🌟 Features
 
-In the project directory, you can run:
+- 🛍️ **Products Page** – Browse a wide variety of floral products.
+- 📝 **Product Details** – Click a bouquet to see more information and a beautiful description.
+- 🛒 **Cart Functionality** – Add to cart and view/update your selections in real time.
+- 💳 **Checkout Page** – Collects delivery and payment info with a clean and responsive form.
+- 📱 **Responsive Design** – Optimized for mobile and desktop using CSS Flexbox and media queries.
+- 💖 **Clean UI/UX** – Styled with love for a fresh, modern flower shop feel.
 
-### `npm start`
+## 🖥️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- ⚛️ React (Functional Components + Hooks)
+- 🎨 CSS3 (Custom Styling)
+- 📦 React Router (Navigation)
+- 🛠️ useState for global state management
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧭 Navigation Flow
 
-### `npm test`
+1. **Home/Product Listing**
+2. **View Single Product**
+3. **Add to Cart**
+4. **View Cart**
+5. **Proceed to Checkout**
+6. **Confirmation Alert**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📸 Screenshots
 
-### `npm run build`
+> *(Include images of your product page, cart, and checkout page here)*  
+> Example:  
+> ![Maridadi Bouquets - Product Page](path/to/screenshot.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Setup & Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Clone the repository
+git clone https://github.com/M-Saleh-N/maridadi-bouquets-ke.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Navigate into the project directory
+cd maridadi-bouquets-ke
 
-### `npm run eject`
+# Install dependencies
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Start the development server
+npm start
