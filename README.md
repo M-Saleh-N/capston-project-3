@@ -11,6 +11,12 @@ Welcome to **Maridadi Bouquets Ke** — an elegant, responsive React e-commerce 
 - 📱 **Responsive Design** – Optimized for mobile and desktop using CSS Flexbox and media queries.
 - 💖 **Clean UI/UX** – Styled with love for a fresh, modern flower shop feel.
 
+## 📸 Sneak Peek
+
+Here’s a look at the product listing page 👇
+
+![Maridadi Bouquets Product Page](./Screenshot%202025-06-03%20104105.png)
+
 ## 🖥️ Tech Stack
 
 - ⚛️ React (Functional Components + Hooks)
@@ -26,12 +32,6 @@ Welcome to **Maridadi Bouquets Ke** — an elegant, responsive React e-commerce 
 4. **View Cart**
 5. **Proceed to Checkout**
 6. **Confirmation Alert**
-
-## 📸 Screenshots
-
-> *(Include images of your product page, cart, and checkout page here)*  
-> Example:  
-> ![Maridadi Bouquets - Product Page](path/to/screenshot.png)
 
 ## 🛠️ Setup & Installation
 
