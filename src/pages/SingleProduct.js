@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import productsData from '../data/productsData'; // create this in next step
+import productsData from '../data/productsData'; 
+import './SingleProduct.css'
 import { useCart } from '../context/CartContext';
 
 const SingleProduct = () => {

@@ -1,0 +1,91 @@
+:root {
+  --primary-color: rgb(219, 105, 128);   /* Brand pink */
+  --primary-hover: rgb(200, 90, 115);    /* Slightly darker for hover */
+  --background: #fff;
+  --text-dark: #2b2020;
+  --text-light: #555;
+}
+
+.single-product-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--background);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.single-product-container img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.single-product-container h2 {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.single-product-container p {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+.single-product-container button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.single-product-container button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Responsive Design for Tablets and Mobile */
+@media (max-width: 768px) {
+  .single-product-container {
+    padding: 16px;
+  }
+
+  .single-product-container h2 {
+    font-size: 1.7rem;
+  }
+
+  .single-product-container img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .single-product-container {
+    padding: 12px;
+  }
+
+  .single-product-container img {
+    max-width: 100%;
+  }
+
+  .single-product-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .single-product-container p {
+    font-size: 1rem;
+  }
+
+  .single-product-container button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+}
